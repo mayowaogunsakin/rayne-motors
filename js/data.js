@@ -1,0 +1,15 @@
+
+window.RAYNE_VEHICLES = [
+ {id:"bmw-x5",brand:"BMW",model:"X5",category:"Luxury",type:"SUV",transmission:"Automatic",fuel:"Petrol",seats:5,availability:"Available",rentalAvailable:true,description:"A refined luxury SUV concept combining everyday practicality with confident performance.",tone:"steel"},
+ {id:"bmw-m3",brand:"BMW",model:"M3",category:"Performance",type:"Sedan",transmission:"Automatic",fuel:"Petrol",seats:5,availability:"Available",rentalAvailable:true,description:"A performance sedan concept focused on sharp response, athletic proportions and a driver-first feel.",tone:"blue"},
+ {id:"mercedes-amg-gle",brand:"Mercedes-AMG",model:"GLE 63",category:"Luxury",type:"SUV",transmission:"Automatic",fuel:"Petrol",seats:5,availability:"Available",rentalAvailable:true,description:"A muscular luxury SUV concept with an expressive stance and premium cabin character.",tone:"silver"},
+ {id:"brabus-g",brand:"Mercedes-Benz",model:"Brabus",category:"Exotic",type:"SUV",transmission:"Automatic",fuel:"Petrol",seats:5,availability:"Reserved",rentalAvailable:false,description:"A fictional high-performance luxury SUV concept inspired by bold custom automotive design.",tone:"black"},
+ {id:"ferrari-roma",brand:"Ferrari",model:"Roma",category:"Exotic",type:"Coupe",transmission:"Automatic",fuel:"Petrol",seats:2,availability:"Available",rentalAvailable:true,description:"An elegant grand-touring coupe concept designed around flowing lines and effortless presence.",tone:"red"},
+ {id:"ford-mustang",brand:"Ford",model:"Mustang",category:"Performance",type:"Coupe",transmission:"Manual",fuel:"Petrol",seats:4,availability:"Available",rentalAvailable:true,description:"A modern muscle-car concept balancing heritage, attitude and an engaging driving experience.",tone:"orange"},
+ {id:"dodge-charger",brand:"Dodge",model:"Charger",category:"Performance",type:"Sedan",transmission:"Automatic",fuel:"Petrol",seats:5,availability:"Available",rentalAvailable:true,description:"A bold performance sedan concept with a wide stance and unmistakable road presence.",tone:"purple"},
+ {id:"lexus-lx600",brand:"Lexus",model:"LX600",category:"Luxury",type:"SUV",transmission:"Automatic",fuel:"Petrol",seats:7,availability:"Available",rentalAvailable:true,description:"A premium SUV concept prioritizing composed comfort, space and confident long-distance travel.",tone:"champagne"},
+ {id:"lexus-lx570",brand:"Lexus",model:"LX570",category:"Luxury",type:"SUV",transmission:"Automatic",fuel:"Petrol",seats:7,availability:"Rental Only",rentalAvailable:true,description:"A spacious luxury SUV concept presented as a rental-focused option for extended journeys.",tone:"graphite"},
+ {id:"lexus-is250",brand:"Lexus",model:"IS250",category:"Sedan",type:"Sedan",transmission:"Automatic",fuel:"Petrol",seats:5,availability:"Available",rentalAvailable:true,description:"A compact premium sedan concept combining understated design with a focused cabin experience.",tone:"cyan"}
+];
+
+window.RAYNE_IMG = id => `assets/images/${id}.svg`;

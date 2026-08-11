@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#34434a"/><stop offset="1" stop-color="#080A0C"/></linearGradient><radialGradient id="r"><stop stop-color="#9aa8ad" stop-opacity=".34"/><stop offset="1" stop-color="#9aa8ad" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="760" fill="url(#g)"/><circle cx="900" cy="220" r="330" fill="url(#r)"/>
+<path d="M100 560 C190 510 280 500 385 495 L490 395 C525 360 570 340 640 337 L805 345 C855 350 885 370 930 414 L1030 455 C1080 475 1110 515 1125 560 L1080 570 L1040 570 C1025 515 970 480 910 480 C845 480 805 520 790 570 L450 570 C435 520 395 480 330 480 C265 480 220 520 205 570 L120 570 Z" fill="#9aa8ad" opacity=".9"/>
+<circle cx="330" cy="570" r="55" fill="#0a0d0f" stroke="#9da7ab" stroke-width="8"/><circle cx="330" cy="570" r="20" fill="#38434a"/>
+<circle cx="910" cy="570" r="55" fill="#0a0d0f" stroke="#9da7ab" stroke-width="8"/><circle cx="910" cy="570" r="20" fill="#38434a"/>
+<path d="M475 465 L540 390 Q565 365 625 363 L790 370 Q830 373 865 408 L915 456 Z" fill="#101619" stroke="#d5dddf" stroke-opacity=".28" stroke-width="4"/>
+<path d="M555 390 L610 385 L625 453 L520 453 Z M638 383 L785 389 Q815 392 835 415 L870 454 L650 453 Z" fill="#253238" stroke="#b7c5c9" stroke-opacity=".18"/>
+<path d="M130 505 L190 488" stroke="#67E8F9" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+<text x="70" y="90" fill="#F2F5F5" font-family="Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="5">RAYNE MOTORS</text>
+<text x="70" y="135" fill="#929BA0" font-family="monospace" font-size="18">CONCEPT VEHICLE VISUAL • REPLACE WITH LICENSED PHOTOGRAPHY</text>
+<text x="70" y="690" fill="#F2F5F5" font-family="Arial,sans-serif" font-size="48" font-weight="700">BMW X5</text>
+<text x="72" y="724" fill="#929BA0" font-family="monospace" font-size="18">BMW • CONCEPT INVENTORY</text>
+</svg>
