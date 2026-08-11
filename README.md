@@ -1,6 +1,6 @@
 # RAYNE MOTORS — V2 Concept Project
 
-A polished, responsive automotive dealership + rental front-end concept created for Mayowa "Mayne" Ogunsakin's portfolio.
+A polished, responsive automotive dealership + rental front-end concept created for Mayowa Ogunsakin's portfolio.
 
 ## Important
 Rayne Motors is fictional. Inventory, prices, reviews, customers, contact details and booking results are demonstration data only.
