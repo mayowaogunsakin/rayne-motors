@@ -478,9 +478,10 @@ h3{font-size:1.45rem}
   .search-shell{
     padding:20px;
   }
-  .mobile-links a{
-    padding:4px 0;
-  }
+  .mobile-links a {
+  padding: 2px 0;
+  font-size: 0.9rem;
+}
   .mobile-links a.active{
     position:relative;
   }
