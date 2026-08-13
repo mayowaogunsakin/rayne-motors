@@ -359,9 +359,18 @@ h3{font-size:1.45rem}
 }
 
 /* Editorial blocks */
-.editorial-media{
-  box-shadow:var(--shadow-soft);
+.editorial-media {
+  height: 100%;
+  overflow: hidden;
 }
+
+.editorial-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .editorial-media:after{
   content:"";
   position:absolute;
