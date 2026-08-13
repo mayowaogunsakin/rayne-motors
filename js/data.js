@@ -12,4 +12,4 @@ window.RAYNE_VEHICLES = [
  {id:"lexus-is250",brand:"Lexus",model:"IS250",category:"Sedan",type:"Sedan",transmission:"Automatic",fuel:"Petrol",seats:5,availability:"Available",rentalAvailable:true,description:"A compact premium sedan concept combining understated design with a focused cabin experience.",tone:"cyan"}
 ];
 
-window.RAYNE_IMG = id => `assets/images/${id}.svg`;
+window.RAYNE_IMG = id => `assets/images/${id}.webp`;
