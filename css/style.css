@@ -50,8 +50,8 @@ h3{font-size:1.45rem}
 .btn-primary:hover{background:#8af1ff;border-color:#8af1ff}
 .btn-ghost:hover{color:var(--accent);border-color:var(--accent)}
 .btn-small{min-height:40px;padding:0 14px;font-size:.82rem}
-.hero{min-height:92vh;display:flex;align-items:end;position:relative;overflow:hidden;padding:150px 0 72px}
-.hero-media{position:absolute;inset:0;z-index:-2;background:#0d1216}
+.hero{min-height:92vh;height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:0;}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;z-index:0;background:#0d1216;overflow:hidden;}
 .hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,10,12,.92) 0%,rgba(8,10,12,.55) 45%,rgba(8,10,12,.15) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 32%)}
 .hero-car{position:absolute;right:-2%;bottom:4%;width:min(70vw,900px);opacity:.82;transform:translate3d(0,0,0) scale(1);transition:transform 1.2s var(--ease)}
 .hero:hover .hero-car{transform:scale(1.018)}
@@ -588,14 +588,6 @@ h3{font-size:1.45rem}
     max-height: 48px !important;
   }
 }
-.hero-media {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  min-height: 700px;
-  overflow: hidden;
-  display: block;
-}
 
 .hero-slide {
   position: absolute;
@@ -640,7 +632,7 @@ h3{font-size:1.45rem}
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.48);
+  z-index: 2;
   pointer-events: none;
 }
