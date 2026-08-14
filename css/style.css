@@ -636,8 +636,9 @@ h3{font-size:1.45rem}
   z-index: 2;
   pointer-events: none;
 }
+
 /* =========================
-   HERO TYPING EFFECT
+   ANIMATED HERO TYPING
    ========================= */
 
 .typing-hero {
@@ -646,10 +647,23 @@ h3{font-size:1.45rem}
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  transition: font-size 0.25s ease;
 }
 
 #heroTyping {
   white-space: pre-line;
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  text-align: center;
+
+  transition:
+    color 0.25s ease,
+    font-size 0.25s ease;
+
+  text-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.75),
+    0 0 35px rgba(103, 232, 249, 0.12);
 }
 
 .typing-cursor {
@@ -659,12 +673,8 @@ h3{font-size:1.45rem}
   margin-left: 10px;
   background: var(--accent);
   vertical-align: middle;
-  animation: typingCursor 0.8s ease-in-out infinite;
-}
 
-.typing-cursor.done {
-  opacity: 0;
-  animation: none;
+  animation: typingCursor 0.7s ease-in-out infinite;
 }
 
 @keyframes typingCursor {
@@ -681,5 +691,9 @@ h3{font-size:1.45rem}
   .typing-cursor {
     width: 2px;
     margin-left: 6px;
+  }
+
+  #heroTyping {
+    letter-spacing: -0.04em;
   }
 }
