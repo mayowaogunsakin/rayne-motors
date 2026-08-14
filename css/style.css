@@ -636,3 +636,50 @@ h3{font-size:1.45rem}
   z-index: 2;
   pointer-events: none;
 }
+/* =========================
+   HERO TYPING EFFECT
+   ========================= */
+
+.typing-hero {
+  min-height: 1.84em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#heroTyping {
+  white-space: pre-line;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.82em;
+  margin-left: 10px;
+  background: var(--accent);
+  vertical-align: middle;
+  animation: typingCursor 0.8s ease-in-out infinite;
+}
+
+.typing-cursor.done {
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes typingCursor {
+  0%, 45% {
+    opacity: 1;
+  }
+
+  46%, 100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .typing-cursor {
+    width: 2px;
+    margin-left: 6px;
+  }
+}
