@@ -588,26 +588,54 @@ h3{font-size:1.45rem}
     max-height: 48px !important;
   }
 }
-/* Homepage hero vehicle slideshow */
-.hero-slideshow {
+.hero-media {
   position: relative;
+  width: 100%;
+  min-height: 100vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-slideshow .hero-slide {
+.hero-slide {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 1.2s ease-in-out;
+  z-index: 0;
 }
 
-.hero-slideshow .hero-slide.active {
+.hero-slide.active {
   opacity: 1;
 }
 
-.hero-slideshow .hero-slide:first-child {
+.hero-content {
   position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 900;
+  line-height: 0.95;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.75);
+}
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  z-index: 1;
+  pointer-events: none;
 }
