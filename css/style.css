@@ -520,3 +520,24 @@ h3{font-size:1.45rem}
     padding:60px 0;
   }
 }
+/* Rayne Motors logo */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand img {
+  display: block;
+  width: 150px;
+  height: auto;
+  max-height: 48px;
+  object-fit: contain;
+}
+@media (max-width: 560px) {
+  .brand img {
+    width: 125px;
+    max-height: 42px;
+  }
+}
