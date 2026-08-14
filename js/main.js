@@ -47,3 +47,34 @@ if (heroSlides.length > 1) {
     heroSlides[heroSlideIndex].classList.add('active');
   }, 5000);
 }
+/* =========================
+   HERO TYPING EFFECT
+   ========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const typingElement = document.getElementById("heroTyping");
+  const cursor = document.querySelector(".typing-cursor");
+
+  if (!typingElement) return;
+
+  const text = "FIND YOUR\nNEXT DRIVE.";
+
+  let index = 0;
+
+  const typeSpeed = 85;
+
+  function typeNextCharacter() {
+    if (index < text.length) {
+      typingElement.textContent += text.charAt(index);
+      index++;
+
+      setTimeout(typeNextCharacter, typeSpeed);
+    } else {
+      setTimeout(() => {
+        cursor?.classList.add("done");
+      }, 700);
+    }
+  }
+
+  setTimeout(typeNextCharacter, 700);
+});
