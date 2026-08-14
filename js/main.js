@@ -48,7 +48,7 @@ if (heroSlides.length > 1) {
   }, 5000);
 }
 /* =========================
-   HERO TYPING EFFECT
+   HERO TYPING EFFECT — LOOP
    ========================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -60,21 +60,67 @@ document.addEventListener("DOMContentLoaded", () => {
   const text = "FIND YOUR\nNEXT DRIVE.";
 
   let index = 0;
+  let deleting = false;
 
-  const typeSpeed = 85;
+  const typeSpeed = 90;
+  const deleteSpeed = 55;
+  const pauseAfterTyping = 1800;
+  const pauseAfterDeleting = 500;
 
-  function typeNextCharacter() {
-    if (index < text.length) {
-      typingElement.textContent += text.charAt(index);
-      index++;
+  function typeEffect() {
+    if (!deleting) {
+      if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
 
-      setTimeout(typeNextCharacter, typeSpeed);
+        updateHeroAnimation();
+
+        setTimeout(typeEffect, typeSpeed);
+      } else {
+        setTimeout(() => {
+          deleting = true;
+          typeEffect();
+        }, pauseAfterTyping);
+      }
     } else {
-      setTimeout(() => {
-        cursor?.classList.add("done");
-      }, 700);
+      if (index > 0) {
+        index--;
+
+        typingElement.textContent = text.substring(0, index);
+
+        updateHeroAnimation();
+
+        setTimeout(typeEffect, deleteSpeed);
+      } else {
+        deleting = false;
+
+        setTimeout(typeEffect, pauseAfterDeleting);
+      }
     }
   }
 
-  setTimeout(typeNextCharacter, 700);
+  function updateHeroAnimation() {
+    const progress = index / text.length;
+
+    /*
+      Gradually increase size while typing,
+      then reduce it while deleting.
+    */
+    const minSize = 3.5;
+    const maxSize = 8;
+
+    const size = minSize + ((maxSize - minSize) * progress);
+
+    typingElement.style.fontSize = `clamp(${minSize}rem, ${size}vw, ${maxSize}rem)`;
+
+    /*
+      Continuously change colour through the
+      cyan → white → blue → cyan range.
+    */
+    const hue = 185 + (progress * 80);
+
+    typingElement.style.color = `hsl(${hue}, 85%, 70%)`;
+  }
+
+  setTimeout(typeEffect, 700);
 });
