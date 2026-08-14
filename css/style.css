@@ -591,16 +591,16 @@ h3{font-size:1.45rem}
 .hero-media {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 700px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 }
 
 .hero-slide {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -640,7 +640,7 @@ h3{font-size:1.45rem}
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.38);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
   pointer-events: none;
 }
