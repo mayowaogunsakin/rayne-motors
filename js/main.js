@@ -33,3 +33,17 @@ document.addEventListener("DOMContentLoaded",()=>{
  });
  window.RayneUI={setDrawer};
 });
+// Homepage hero vehicle slideshow
+const heroSlides = document.querySelectorAll('.hero-slide');
+
+if (heroSlides.length > 1) {
+  let heroSlideIndex = 0;
+
+  setInterval(() => {
+    heroSlides[heroSlideIndex].classList.remove('active');
+
+    heroSlideIndex = (heroSlideIndex + 1) % heroSlides.length;
+
+    heroSlides[heroSlideIndex].classList.add('active');
+  }, 5000);
+}
