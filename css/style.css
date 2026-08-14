@@ -573,3 +573,18 @@ h3{font-size:1.45rem}
     max-height: 42px;
   }
 }
+/* Rayne Motors logo size */
+.brand img {
+  width: 175px !important;
+  height: auto !important;
+  max-height: 55px !important;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 560px) {
+  .brand img {
+    width: 145px !important;
+    max-height: 48px !important;
+  }
+}
