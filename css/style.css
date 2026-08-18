@@ -1137,3 +1137,377 @@ h3{font-size:1.45rem}
   }
 
 }
+/* =========================================================
+   PREMIUM MOBILE MENU — FINAL OVERRIDE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  /* ===============================
+     MENU BUTTON
+     =============================== */
+
+  .menu-btn {
+    display: grid !important;
+    position: relative !important;
+    width: 46px !important;
+    height: 46px !important;
+    padding: 0 !important;
+    border: 1px solid rgba(103, 232, 249, 0.28) !important;
+    border-radius: 14px !important;
+    background: rgba(8, 10, 12, 0.72) !important;
+    color: var(--text) !important;
+    overflow: hidden !important;
+    isolation: isolate;
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease,
+      background 0.3s ease !important;
+  }
+
+  .menu-btn::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.15);
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(103, 232, 249, 0.4),
+      rgba(103, 232, 249, 0.12) 35%,
+      transparent 72%
+    );
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      transform 0.6s cubic-bezier(.16,1,.3,1),
+      opacity 0.3s ease;
+  }
+
+  .menu-btn:hover {
+    transform: translateY(-2px) scale(1.04) !important;
+    border-color: rgba(103, 232, 249, 0.7) !important;
+    background: rgba(103, 232, 249, 0.08) !important;
+    box-shadow:
+      0 10px 35px rgba(0, 0, 0, 0.4),
+      0 0 30px rgba(103, 232, 249, 0.15) !important;
+  }
+
+  .menu-btn:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  .menu-btn:active {
+    transform: scale(0.93) !important;
+  }
+
+
+  /* ===============================
+     FLOATING MENU
+     =============================== */
+
+  .mobile-drawer {
+    position: fixed !important;
+
+    top: 82px !important;
+    right: 14px !important;
+    left: auto !important;
+    bottom: auto !important;
+
+    width: min(340px, calc(100vw - 28px)) !important;
+    max-height: calc(100vh - 100px) !important;
+
+    padding: 70px 20px 24px !important;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(22, 30, 35, 0.97),
+        rgba(7, 11, 14, 0.98)
+      ) !important;
+
+    border: 1px solid rgba(103, 232, 249, 0.2) !important;
+    border-radius: 24px !important;
+
+    box-shadow:
+      0 30px 80px rgba(0, 0, 0, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04),
+      0 0 50px rgba(103, 232, 249, 0.06) !important;
+
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+
+    overflow: hidden !important;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+
+    transform:
+      translateY(-18px)
+      scale(0.94) !important;
+
+    transform-origin: top right !important;
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.45s cubic-bezier(.16,1,.3,1) !important;
+  }
+
+
+  /* OPEN STATE */
+
+  .mobile-drawer.open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform:
+      translateY(0)
+      scale(1) !important;
+  }
+
+
+  /* ===============================
+     LIQUID LIGHT
+     =============================== */
+
+  .mobile-drawer::before {
+    content: "";
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    top: -140px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background:
+      radial-gradient(
+        circle,
+        rgba(103, 232, 249, 0.18),
+        rgba(103, 232, 249, 0.06) 40%,
+        transparent 70%
+      );
+
+    filter: blur(5px);
+
+    pointer-events: none;
+
+    animation: menuLiquid 5s ease-in-out infinite;
+  }
+
+  @keyframes menuLiquid {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+      transform: translate(-20px, 18px) scale(1.15);
+    }
+  }
+
+
+  /* ===============================
+     CLOSE BUTTON
+     =============================== */
+
+  .mobile-drawer > button[data-mobile-close] {
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+
+    width: 40px !important;
+    height: 40px !important;
+
+    z-index: 10 !important;
+
+    border: 1px solid rgba(103, 232, 249, 0.18) !important;
+    border-radius: 12px !important;
+
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: var(--text) !important;
+
+    transition:
+      transform 0.25s ease,
+      background 0.25s ease,
+      border-color 0.25s ease !important;
+  }
+
+  .mobile-drawer > button[data-mobile-close]:hover {
+    transform: rotate(90deg) scale(1.05) !important;
+    background: rgba(103, 232, 249, 0.1) !important;
+    border-color: rgba(103, 232, 249, 0.5) !important;
+    color: var(--accent) !important;
+  }
+
+
+  /* ===============================
+     NAVIGATION LINKS
+     =============================== */
+
+  .mobile-links {
+    position: relative !important;
+    z-index: 5 !important;
+
+    display: grid !important;
+    gap: 6px !important;
+
+    font-size: 1rem !important;
+  }
+
+  .mobile-links a {
+    position: relative !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    min-height: 48px !important;
+
+    padding: 0 14px !important;
+
+    border: 1px solid transparent !important;
+    border-radius: 12px !important;
+
+    color: var(--muted) !important;
+
+    font-size: 1rem !important;
+
+    transition:
+      color 0.25s ease,
+      background 0.3s ease,
+      border-color 0.3s ease,
+      transform 0.3s ease !important;
+  }
+
+  .mobile-links a::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 3px;
+    height: 0;
+
+    border-radius: 10px;
+
+    background: var(--accent);
+
+    transform: translateY(-50%);
+
+    box-shadow:
+      0 0 15px rgba(103, 232, 249, 0.8);
+
+    transition: height 0.3s ease;
+  }
+
+  .mobile-links a:hover {
+    color: var(--text) !important;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(103, 232, 249, 0.1),
+        rgba(103, 232, 249, 0.025)
+      ) !important;
+
+    border-color: rgba(103, 232, 249, 0.12) !important;
+
+    transform: translateX(4px) !important;
+  }
+
+  .mobile-links a:hover::before {
+    height: 24px;
+  }
+
+  .mobile-links a.active {
+    color: var(--accent) !important;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(103, 232, 249, 0.1),
+        rgba(103, 232, 249, 0.025)
+      ) !important;
+
+    border-color: rgba(103, 232, 249, 0.14) !important;
+  }
+
+  .mobile-links a.active::before {
+    height: 24px;
+  }
+
+
+  /* ===============================
+     FOOTER
+     =============================== */
+
+  .mobile-footer {
+    position: relative !important;
+
+    z-index: 5 !important;
+
+    margin-top: 20px !important;
+    padding-top: 18px !important;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+
+    color: rgba(146, 155, 160, 0.65) !important;
+
+    font-size: 0.65rem !important;
+  }
+
+
+  /* ===============================
+     BACKDROP
+     =============================== */
+
+  .scrim {
+    background:
+      radial-gradient(
+        circle at 85% 10%,
+        rgba(103, 232, 249, 0.035),
+        transparent 30%
+      ),
+      rgba(0, 0, 0, 0.62) !important;
+
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+  }
+}
+
+
+/* ===============================
+   SMALL PHONES
+   =============================== */
+
+@media (max-width: 560px) {
+
+  .mobile-drawer {
+    top: 78px !important;
+    right: 10px !important;
+
+    width: calc(100vw - 20px) !important;
+
+    border-radius: 22px !important;
+
+    padding: 68px 16px 20px !important;
+  }
+
+  .mobile-links a {
+    min-height: 46px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .mobile-drawer > button[data-mobile-close] {
+    top: 14px !important;
+    right: 14px !important;
+  }
+}
