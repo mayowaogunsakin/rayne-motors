@@ -185,11 +185,13 @@ h3 {
   left: 0;
   z-index: 50;
   border-bottom: 1px solid transparent;
+
   background: linear-gradient(
     180deg,
     rgba(8, 10, 12, .82),
     rgba(8, 10, 12, .22)
   );
+
   transition: .35s var(--ease);
 }
 
@@ -197,7 +199,9 @@ h3 {
   border-color: var(--border);
   background: rgba(8, 10, 12, .88);
   box-shadow: 0 14px 45px rgba(0, 0, 0, .18);
+
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 .nav {
@@ -217,12 +221,18 @@ h3 {
 
 .logo::before {
   display: inline-block;
+
   width: 7px;
   height: 7px;
+
   margin: 0 9px 1px 0;
+
   border-radius: 50%;
+
   background: var(--accent);
+
   box-shadow: 0 0 18px rgba(103, 232, 249, .45);
+
   content: "";
 }
 
@@ -246,11 +256,16 @@ h3 {
   right: 0;
   bottom: -8px;
   left: 0;
+
   height: 1px;
+
   background: var(--accent);
+
   content: "";
+
   transform: scaleX(0);
   transform-origin: right;
+
   transition: transform .28s var(--ease);
 }
 
@@ -290,9 +305,12 @@ h3 {
 
 .brand img {
   display: block;
+
   width: 175px;
   height: auto;
+
   max-height: 55px;
+
   object-fit: contain;
 }
 
@@ -304,10 +322,13 @@ h3 {
 .menu-btn {
   display: grid;
   place-items: center;
+
   width: 42px;
   height: 42px;
+
   border: 1px solid var(--border);
   border-radius: 10px;
+
   background: transparent;
   color: var(--text);
 }
@@ -322,23 +343,33 @@ h3 {
 
 .cart-count {
   position: absolute;
+
   top: -6px;
   right: -7px;
+
   min-width: 18px;
   height: 18px;
+
   padding: 0 5px;
+
   border-radius: 20px;
+
   background: var(--accent);
   color: #061015;
+
   font: 700 10px/18px "Space Mono";
+
   text-align: center;
 }
 
 .cart-icon {
   display: block;
+
   width: 21px;
   height: 21px;
+
   color: var(--text);
+
   transition:
     color .25s var(--ease),
     transform .25s var(--ease);
@@ -358,13 +389,21 @@ h3 {
   align-items: center;
   justify-content: center;
   gap: 10px;
+
   min-height: 48px;
+
   padding: 0 20px;
+
   border: 1px solid var(--border);
   border-radius: 10px;
+
   background: transparent;
   color: var(--text);
+
   font-weight: 700;
+
+  text-align: center;
+
   transition: .25s var(--ease);
 }
 
@@ -375,9 +414,12 @@ h3 {
 
 .btn-primary {
   border-color: var(--accent);
+
   background: var(--accent);
   color: #051014;
-  box-shadow: 0 8px 24px rgba(103, 232, 249, .09);
+
+  box-shadow:
+    0 8px 24px rgba(103, 232, 249, .09);
 }
 
 .btn-primary:hover {
@@ -413,18 +455,21 @@ h3 {
 
   width: 100%;
   height: 100vh;
+
   min-height: 680px;
 
   margin: 0;
   padding: 0;
 
   overflow: hidden;
+
   isolation: isolate;
 
   background: #080A0C;
 }
 
 /* Technical grid */
+
 .hero::before {
   position: absolute;
   inset: 0;
@@ -456,9 +501,17 @@ h3 {
       black,
       transparent 78%
     );
+
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 78%
+    );
 }
 
 /* Decorative circle */
+
 .hero::after {
   position: absolute;
 
@@ -507,7 +560,7 @@ h3 {
 }
 
 /* =========================================================
-   DARK HERO OVERLAY
+   HERO DARK OVERLAY
    ========================================================= */
 
 .hero-media::after {
@@ -520,16 +573,16 @@ h3 {
   background:
     linear-gradient(
       180deg,
-      rgba(0, 0, 0, .52) 0%,
-      rgba(0, 0, 0, .30) 35%,
-      rgba(0, 0, 0, .64) 100%
+      rgba(0, 0, 0, .58) 0%,
+      rgba(0, 0, 0, .34) 35%,
+      rgba(0, 0, 0, .70) 100%
     ),
 
     linear-gradient(
       90deg,
-      rgba(0, 0, 0, .20) 0%,
+      rgba(0, 0, 0, .24) 0%,
       transparent 50%,
-      rgba(0, 0, 0, .20) 100%
+      rgba(0, 0, 0, .24) 100%
     );
 
   pointer-events: none;
@@ -559,16 +612,8 @@ h3 {
   max-width: none;
   max-height: none;
 
-  /*
-     IMPORTANT:
-     The image fills the ENTIRE hero.
-  */
   object-fit: cover;
 
-  /*
-     Keeps the car centered while filling
-     the complete desktop viewport.
-  */
   object-position: center center;
 
   opacity: 0;
@@ -576,10 +621,12 @@ h3 {
   visibility: hidden;
 
   /*
-     NO SCALE.
-     This prevents the previous slow zoom.
+    IMPORTANT:
+    No scale and no transform animation.
+    This completely removes the slow zoom effect.
   */
-  transform: none;
+
+  transform: none !important;
 
   transition:
     opacity .75s ease,
@@ -595,12 +642,9 @@ h3 {
 
   visibility: visible;
 
-  /*
-     Explicitly prevent any zoom animation.
-  */
-  transform: none;
+  transform: none !important;
 
-  animation: none;
+  animation: none !important;
 }
 
 /* =========================================================
@@ -617,20 +661,20 @@ h3 {
 
   width: min(70vw, 900px);
 
-  opacity: .72;
+  opacity: .58;
 
   filter:
     drop-shadow(
       0 35px 60px rgba(0, 0, 0, .55)
     );
 
-  transform: none;
+  transform: none !important;
 
   transition: none;
 }
 
 .hero:hover .hero-car {
-  transform: none;
+  transform: none !important;
 }
 
 /* =========================================================
@@ -646,6 +690,7 @@ h3 {
 
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
@@ -719,13 +764,31 @@ h3 {
   color: #c1c8ca;
 }
 
+/* =========================================================
+   HERO ACTIONS
+   ========================================================= */
+
 .hero-actions {
   display: flex;
+
+  align-items: center;
+  justify-content: center;
+
   flex-wrap: wrap;
 
   gap: 12px;
 
+  width: 100%;
+
   margin-top: 32px;
+}
+
+.hero-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
 }
 
 .hero-watermark {
@@ -769,6 +832,8 @@ h3 {
   min-height: 1.84em;
 
   flex-wrap: wrap;
+
+  width: 100%;
 
   transition: font-size .25s ease;
 }
@@ -825,6 +890,7 @@ h3 {
 
 .search-shell {
   position: relative;
+
   z-index: 20;
 
   margin-top: -30px;
@@ -1071,6 +1137,7 @@ h3 {
   text-transform: uppercase;
 
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .badge.available {
@@ -1098,7 +1165,6 @@ h3 {
 
 .card-title h3 {
   margin: 0;
-
   font-size: 1.2rem;
 }
 
@@ -1109,6 +1175,7 @@ h3 {
 
 .card-meta {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 8px 14px;
@@ -1134,6 +1201,7 @@ h3 {
 
 .filters-bar {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 8px;
@@ -1343,7 +1411,6 @@ h3 {
 
 .dots {
   gap: 7px;
-
   margin-top: 18px;
 }
 
@@ -1388,7 +1455,6 @@ h3 {
 
 .gallery-grid {
   columns: 3 280px;
-
   column-gap: 14px;
 }
 
@@ -1456,7 +1522,6 @@ h3 {
 
 .gallery-item:hover .gallery-overlay {
   opacity: 1;
-
   transform: none;
 }
 
@@ -1631,13 +1696,11 @@ h3 {
   transition: .3s;
 
   backdrop-filter: blur(4px);
-
   -webkit-backdrop-filter: blur(4px);
 }
 
 .scrim.open {
   opacity: 1;
-
   pointer-events: auto;
 }
 
@@ -2096,10 +2159,6 @@ h3 {
     overflow: hidden;
   }
 
-  /*
-     Mobile images:
-     full screen, NO zoom.
-  */
   .hero-slide {
     position: absolute;
 
@@ -2127,9 +2186,10 @@ h3 {
       visibility .75s ease;
   }
 
-  /*
-     Darker mobile overlay.
-  */
+  /* =======================================================
+     MOBILE HERO OVERLAY
+     ======================================================= */
+
   .hero-media::after {
     position: absolute;
 
@@ -2140,9 +2200,9 @@ h3 {
     background:
       linear-gradient(
         180deg,
-        rgba(0, 0, 0, .55) 0%,
-        rgba(0, 0, 0, .28) 35%,
-        rgba(8, 10, 12, .78) 100%
+        rgba(0, 0, 0, .60) 0%,
+        rgba(0, 0, 0, .32) 35%,
+        rgba(8, 10, 12, .82) 100%
       );
 
     pointer-events: none;
@@ -2157,7 +2217,7 @@ h3 {
 
     width: 115%;
 
-    opacity: .35;
+    opacity: .30;
 
     transform: none !important;
 
@@ -2165,7 +2225,7 @@ h3 {
   }
 
   .hero:hover .hero-car {
-    transform: none;
+    transform: none !important;
   }
 
   .hero::after {
@@ -2186,10 +2246,62 @@ h3 {
       clamp(4.5rem, 20vw, 8rem);
   }
 
+  /* =======================================================
+     MOBILE HERO CONTENT
+     ======================================================= */
+
   .hero-content {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
     padding:
       40px 20px;
+
+    text-align: center;
   }
+
+  /* =======================================================
+     MOBILE HERO BUTTONS
+     ======================================================= */
+
+  .hero-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: 12px;
+
+    margin-top: 32px;
+  }
+
+  .hero-actions .btn {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: min(100%, 320px);
+
+    min-height: 48px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  /* =======================================================
+     SEARCH
+     ======================================================= */
 
   .search-shell {
     margin-top: -15px;
@@ -2206,6 +2318,10 @@ h3 {
   .search-grid > .btn {
     grid-column: 1 / -1;
   }
+
+  /* =======================================================
+     GENERAL MOBILE SECTIONS
+     ======================================================= */
 
   .section {
     padding: 80px 0;
@@ -2549,9 +2665,12 @@ h3 {
 
   .brand img {
     width: 135px;
-
     max-height: 45px;
   }
+
+  /* =======================================================
+     SMALL MOBILE HERO
+     ======================================================= */
 
   .hero {
     width: 100%;
@@ -2596,11 +2715,30 @@ h3 {
     transform: none !important;
 
     animation: none !important;
+
+    transition:
+      opacity .75s ease,
+      visibility .75s ease;
   }
 
+  /* =======================================================
+     SMALL MOBILE HERO CONTENT
+     ======================================================= */
+
   .hero-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
     padding:
       40px 16px;
+
+    text-align: center;
   }
 
   .hero-kicker {
@@ -2609,13 +2747,53 @@ h3 {
 
   .typing-cursor {
     width: 2px;
-
     margin-left: 6px;
   }
 
   #heroTyping {
     letter-spacing: -.04em;
   }
+
+  /* =======================================================
+     SMALL MOBILE HERO BUTTONS
+     ======================================================= */
+
+  .hero-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: 12px;
+
+    margin-top: 28px;
+  }
+
+  .hero-actions .btn {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: min(100%, 300px);
+
+    min-height: 48px;
+
+    margin: 0 auto;
+
+    padding-left: 18px;
+    padding-right: 18px;
+
+    text-align: center;
+  }
+
+  /* =======================================================
+     SEARCH
+     ======================================================= */
 
   .search-grid {
     grid-template-columns: 1fr;
@@ -2630,6 +2808,10 @@ h3 {
     font-size: 2rem !important;
   }
 
+  /* =======================================================
+     SECTIONS
+     ======================================================= */
+
   .section {
     padding: 74px 0;
   }
@@ -2643,9 +2825,17 @@ h3 {
       clamp(3rem, 16vw, 5rem);
   }
 
+  /* =======================================================
+     VEHICLES
+     ======================================================= */
+
   .vehicle-grid {
     grid-template-columns: 1fr;
   }
+
+  /* =======================================================
+     FORMS
+     ======================================================= */
 
   .form-grid {
     grid-template-columns: 1fr;
@@ -2655,13 +2845,17 @@ h3 {
     grid-column: auto;
   }
 
-  .hero-actions .btn {
-    width: 100%;
-  }
+  /* =======================================================
+     GALLERY
+     ======================================================= */
 
   .gallery-grid {
     columns: 1;
   }
+
+  /* =======================================================
+     FOOTER
+     ======================================================= */
 
   .footer-grid {
     grid-template-columns: 1fr;
@@ -2675,9 +2869,17 @@ h3 {
     margin-top: 10px;
   }
 
+  /* =======================================================
+     AUTH
+     ======================================================= */
+
   .auth-card {
     padding: 24px;
   }
+
+  /* =======================================================
+     MOBILE DRAWER
+     ======================================================= */
 
   .mobile-drawer {
     top: 78px;
@@ -2703,6 +2905,35 @@ h3 {
     top: 14px;
 
     right: 14px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .hero-actions .btn {
+    width: min(100%, 280px);
+  }
+
+  .hero-kicker {
+    gap: 8px;
+  }
+
+  .hero-kicker span:first-child::after {
+    width: 22px;
+    margin-left: 8px;
+  }
+
+  #heroTyping {
+    font-size: clamp(2.3rem, 13vw, 3.5rem);
   }
 }
 
