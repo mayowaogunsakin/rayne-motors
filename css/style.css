@@ -44,6 +44,24 @@ h3{font-size:1.45rem}
 .cart-count{min-width:18px;height:18px;padding:0 5px;border-radius:20px;background:var(--accent);color:#061015;font:700 10px/18px "Space Mono";position:absolute;top:-6px;right:-7px;text-align:center}
 .cart-wrap{position:relative}
 .menu-btn{display:none}
+.cart-icon {
+  width: 21px;
+  height: 21px;
+  display: block;
+  color: var(--text);
+  transition:
+    color .25s var(--ease),
+    transform .25s var(--ease);
+}
+
+.cart-wrap:hover .cart-icon {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.cart-wrap:active .cart-icon {
+  transform: scale(.92);
+}
 .btn{border:1px solid var(--border);background:transparent;color:var(--text);min-height:48px;padding:0 20px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;transition:.25s var(--ease)}
 .btn:hover{transform:translateY(-2px);border-color:#40515a}
 .btn-primary{background:var(--accent);border-color:var(--accent);color:#051014}
