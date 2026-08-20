@@ -2758,39 +2758,26 @@ h3 {
      SMALL MOBILE HERO BUTTONS
      ======================================================= */
 
+@media (max-width: 560px) {
+
   .hero-actions {
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
-
     width: 100%;
-
+    max-width: 360px;
+    margin: 32px auto 0;
     gap: 12px;
-
-    margin-top: 28px;
   }
 
   .hero-actions .btn {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: min(100%, 300px);
-
-    min-height: 48px;
-
+    width: 100%;
+    max-width: 360px;
     margin: 0 auto;
-
-    padding-left: 18px;
-    padding-right: 18px;
-
-    text-align: center;
   }
 
+}
   /* =======================================================
      SEARCH
      ======================================================= */
