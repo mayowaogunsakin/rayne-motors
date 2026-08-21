@@ -2906,24 +2906,3 @@ h3 {
     animation: none !important;
   }
 }
-/* =========================================================
-   HEADER LOGO — EDGE ALIGNMENT
-   ========================================================= */
-
-.site-header .container {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding-left: 0 !important;
-  padding-right: 20px;
-}
-
-.site-header .brand {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-}
-
-.site-header .brand img {
-  display: block;
-  margin-left: 0 !important;
-}
