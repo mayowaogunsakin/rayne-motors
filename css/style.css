@@ -596,7 +596,6 @@ h3 {
 
 .hero-slide {
   position: absolute;
-
   inset: 0;
 
   z-index: 0;
@@ -613,21 +612,16 @@ h3 {
   max-height: none;
 
   object-fit: cover;
-
   object-position: center center;
 
   opacity: 0;
-
   visibility: hidden;
 
-  /*
-    IMPORTANT:
-    No scale and no transform animation.
-    This completely removes the slow zoom effect.
-  */
-
+  /* No zoom, movement or scaling */
   transform: none !important;
+  animation: none !important;
 
+  /* Simple fade */
   transition:
     opacity .75s ease,
     visibility .75s ease;
@@ -639,14 +633,11 @@ h3 {
   z-index: 1;
 
   opacity: 1;
-
   visibility: visible;
 
   transform: none !important;
-
   animation: none !important;
 }
-
 /* =========================================================
    OPTIONAL HERO CAR
    ========================================================= */
