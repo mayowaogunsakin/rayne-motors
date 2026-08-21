@@ -617,14 +617,13 @@ h3 {
   opacity: 0;
   visibility: hidden;
 
-  /* No zoom, movement or scaling */
   transform: none !important;
   animation: none !important;
 
-  /* Simple fade */
+  /* Smooth background/car fade */
   transition:
-    opacity .75s ease,
-    visibility .75s ease;
+    opacity 1.2s ease-in-out,
+    visibility 1.2s ease-in-out;
 
   will-change: opacity;
 }
