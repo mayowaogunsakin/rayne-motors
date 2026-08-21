@@ -598,7 +598,7 @@ h3 {
   position: absolute;
   inset: 0;
 
-  z-index: 0;
+  z-index: 1;
 
   display: block;
 
@@ -622,8 +622,8 @@ h3 {
 
   /* Smooth background/car fade */
   transition:
-    opacity 1.2s ease-in-out,
-    visibility 1.2s ease-in-out;
+    opacity 1.5s ease-in-out,
+    visibility 1.5s ease-in-out;
 
   will-change: opacity;
 }
