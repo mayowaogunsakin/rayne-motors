@@ -1709,7 +1709,7 @@ h3 {
   .brand img {
     width: 145px;
     max-height: 48px;
-    transform: translateX(-60px);
+    transform: translateX(-55px);
 }
 
   /* =======================================================
@@ -1947,7 +1947,6 @@ h3 {
 
   .mobile-drawer.open {
     opacity: 1;
-
     visibility: visible;
     transform:
       translateY(0)
@@ -2134,7 +2133,7 @@ h3 {
   .brand img {
     width: 135px;
     max-height: 45px;
-    transform: translateX(-60px);
+    transform: translateX(55px);
   }
 
   /* =======================================================
