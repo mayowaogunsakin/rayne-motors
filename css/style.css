@@ -307,7 +307,10 @@ h3 {
 
 @media (min-width: 801px) {
   .site-header .brand {
-    position: static;
+    position: relative;
+    left: calc(
+      20px - max(20px, (100vw - var(--max)) / 2) - 25px
+    );
   }
 }
 
