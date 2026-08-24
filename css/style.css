@@ -2133,7 +2133,7 @@ h3 {
   .brand img {
     width: 135px;
     max-height: 45px;
-    transform: translateX(55px);
+    transform: translateX(-55px);
   }
 
   /* =======================================================
