@@ -306,6 +306,11 @@ h3 {
    ========================================================= */
 
 @media (min-width: 801px) {
+  .site-header .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .site-header .brand {
     position: static;
   }
