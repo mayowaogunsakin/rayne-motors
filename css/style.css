@@ -527,9 +527,7 @@ h3 {
       transparent 50%,
       rgba(0, 0, 0, .24) 100%
     );
-
   pointer-events: none;
-
   content: "";
 }
 
@@ -557,16 +555,13 @@ h3 {
   transition:
     opacity 1.5s ease-in-out,
     visibility 1.5s ease-in-out;
-
   will-change: opacity;
 }
 
 .hero-slide.active {
   z-index: 2;
-
   opacity: 1;
   visibility: visible;
-
   transform: none !important;
   animation: none !important;
 }
@@ -596,19 +591,14 @@ h3 {
 
 .hero-content h1 {
   margin: 0;
-
   color: #fff;
-
   font-size:
     clamp(3rem, 8vw, 7rem);
-
   font-weight: 900;
   line-height: .95;
-
   text-shadow:
     0 5px 25px rgba(0, 0, 0, .9),
     0 12px 60px rgba(0, 0, 0, .7);
-
   text-wrap: balance;
 }
 
@@ -634,7 +624,6 @@ h3 {
   height: 1px;
   margin: 0 0 3px 12px;
   background: var(--accent);
-
   content: "";
 }
 
@@ -1096,7 +1085,6 @@ h3 {
   height: 1px;
   margin-top: 12px;
   background: var(--accent);
-
   content: "";
 }
 
@@ -1721,7 +1709,7 @@ h3 {
   .brand img {
     width: 145px;
     max-height: 48px;
-    transform: translateX(-45px);
+    transform: translateX(-60px);
 }
 
   /* =======================================================
@@ -1887,7 +1875,6 @@ h3 {
   .editorial,
   .detail-grid {
     grid-template-columns: 1fr;
-
     gap: 30px;
   }
 
@@ -2147,7 +2134,7 @@ h3 {
   .brand img {
     width: 135px;
     max-height: 45px;
-    transform: translateX(-45px);
+    transform: translateX(-60px);
   }
 
   /* =======================================================
