@@ -309,7 +309,7 @@ h3 {
   .site-header .brand {
     position: relative;
     left: calc(
-      20px - max(20px, (100vw - var(--max)) / 2) -10px
+      20px - max(20px, (100vw - var(--max)) / 2) -15px
     );
   }
 }
